@@ -10,7 +10,16 @@ Desenvolvimento do site da Data Machina
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Space Mono", monospace;}
+
+body, h1, h2, p {font-family: "Space Grotesk", sans-serif;}
+
+h3 {font-family: "Space Mono", monospace;}
+
+h3 {font-size: 15px;}
+
+h2 {font-size: 20px;}
+
+h1 {font-size: 25px;}
 
 body, html {
   height: 100%;
@@ -28,6 +37,8 @@ body, html {
 .w3-bar .w3-button {
   padding: 16px;
 }
+
+
 </style>
 <body>
 
@@ -37,10 +48,10 @@ body, html {
     <a href="#home" class="w3-bar-item w3-button w3-wide">DATA MACHINA</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">SOBRE</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i>EQUIPE</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> CLIENTES</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTATOS</a>
+      <a href="#about" class="w3-bar-item w3-button">Sobre nós</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i>&nbspEquipe</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i>&nbspClientes</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>&nbspContato</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -62,10 +73,9 @@ body, html {
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Resolvemos seus problemas de grandes volumes de dados</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Resolvemos problemas difíceis e complexos que envolvem grandes volumes de dados</span><br>
-    <span class="w3-large">Sim, nós fazemos isso por você.</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Mas, como?</a></p>
+    <span class="w3-xxlarge w3-hide-small">Resolvemos seus problemas de grandes volumes de dados</span><br>
+    <h3 class="w3-large">Sim, nós fazemos isso por você.</h3>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Mas como?</a></p>
   </div>
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -75,172 +85,145 @@ body, html {
 </header>
 
 <!-- About Section -->
-<div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">ABOUT THE COMPANY</h3>
-  <p class="w3-center w3-large">Key features of our company</p>
+<div class="w3-container" style="padding:128px 16px; background: #F0F0F0" id="about">
+  <h1 class="w3-center">Sobre Nós</h1>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Responsive</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
+    <div class="w3-third">
       <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Passion</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <h3 class="w3-large">A Data Machina</h3>
+      <p>Nossa equipe tem o espírito de pesquisador que também tem vontade de transformar a teoria em ação (pesquisa aplicada), com um viés prático de quem quer resolver um problema real do cliente.</p>
     </div>
-    <div class="w3-quarter">
+    <div class="w3-third">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <h3 class="w3-large">O que Fazemos</h3>
+      <p>Solucionamos problemas que envolvem grandes volumes de dados, de fontes diversas e desestruturadas, e onde é preciso associar a inteligência de pessoas e processos ao poder de resposta computacional.</p>
+    </div>
+    <div class="w3-third">
       <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Design</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Support</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <h3 class="w3-large">Design e Computação</h3>
+      <p>Usamos metodologias de inovação e colaboração, como Design Thinking, Design Sprint e Human Centered Design, associadas a ferramentas da computação, como Machine Learning, Big Data e Cloud Computing.</p>
     </div>
   </div>
 </div>
 
-<!-- Promo Section - "We know design" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>We know design.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
-      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
-    </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="B3.png" alt="Buildings" width="700" height="394">
-    </div>
-  </div>
-</div>
 
 <!-- Team Section -->
-<div class="w3-container" style="padding:128px 16px" id="team">
-  <h3 class="w3-center">THE TEAM</h3>
-  <p class="w3-center w3-large">The ones who runs this company</p>
+<div class="w3-container" style="padding:128px 16px; background: #11049A;" id="team">
+  <h1 class="w3-center">Equipe</h1>
+
   <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>John Doe</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <div class="w3-container">
+            <h2 align="center">Ivo Pons</h2>
+            <h3 class="w3-opacity" align="center">Cargo</h3>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>Anja Doe</h3>
-          <p class="w3-opacity">Art Director</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <div class="w3-container">
+            <h2 align="center">Marcio Cabral</h2>
+            <h3 class="w3-opacity" align="center">Cargo</h3>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Web Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <div class="w3-container">
+            <h2 align="center">Denise Miyamotto</h2>
+            <h3 class="w3-opacity" align="center">Cargo</h3>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
-        <div class="w3-container">
-          <h3>Dan Star</h3>
-          <p class="w3-opacity">Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <div class="w3-container">
+            <h2 align="center">Sophie Liu</h2>
+            <h3 class="w3-opacity" align="center">Cargo</h3>
+          </div>
         </div>
       </div>
+
     </div>
+
+    <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card">
+            <div class="w3-container">
+              <h2 align="center">Giovana Maidana</h2>
+              <h3 class="w3-opacity" align="center">Cargo</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card">
+            <div class="w3-container">
+              <h2 align="center">Luciano Cejnog</h2>
+              <h3 class="w3-opacity" align="center">Cargo</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card">
+            <div class="w3-container">
+              <h2 align="center">Flávio Silva</h2>
+              <h3 class="w3-opacity" align="center">Cargo</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card">
+            <div class="w3-container">
+              <h2 align="center">André Neto</h2>
+              <h3 class="w3-opacity" align="center">Cargo</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
   </div>
-</div>
 
 <!-- Work Section -->
-<div class="w3-container" style="padding:128px 16px" id="work">
-  <h3 class="w3-center">CLIENTES</h3>
-  <p class="w3-center w3-large">What we've done for people</p>
-
+<div class="w3-container" style="padding:128px 16px;" id="work">
+  <h1 class="w3-center">Clientes</h1>
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-col l3 m6">
-      <img src="comgas.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
+      <a  href="https://www.comgas.com.br/"><img src="comgas.png" style="width:100%" class="w3-hover-opacity" alt="Comgás – Companhia de Gás de São Paulo"></a>
     </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_phone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_drone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_sound.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
-    </div>
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
 </div>
 
 
 <!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">CONTACT</h3>
-  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+<div class="w3-container" style="padding:128px 16px; background: #F0F0F0" id="CONTACT">
+  <h1 class="w3-center">Contato</h1>
   <div style="margin-top:48px">
     <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Av. Vital Brasil, 305, Butantã, São Paulo</p>
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +55 (11) 3032-5195</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: contato@datamachina.com.br</p>
     <br>
     <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Nome" required name="Name"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Assunto" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Menssagem" required name="Message"></p>
       <p>
         <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          <i class="fa fa-paper-plane"></i> Enviar
         </button>
       </p>
     </form>
-    <!-- Image of location/map -->
-    <img src="B2.png" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
-  </div>
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
+<footer class="w3-center w3-padding-64" style="background-image: linear-gradient(to right, #11049A , #E23025)">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
     <i class="fa fa-instagram w3-hover-opacity"></i>

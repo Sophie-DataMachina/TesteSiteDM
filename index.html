@@ -13,20 +13,21 @@
 
 body, h1, h2, p {font-family: "Space Grotesk", sans-serif;}
 
-h3 {font-family: "Space Mono", monospace;}
-
-h3 {font-size: 15px;}
+h3 {font-size: 20px;
+    color: #F0F0F0;
+}
 
 h2 {font-size: 20px;}
 
 h1 {font-size: 25px;
     font-weight: bold;
 }
-    
+
 body, html {
   height: 100%;
   line-height: 1.8;
 }
+
 
 /* Full height image header */
 .bgimg-1 {
@@ -49,6 +50,39 @@ body, html {
     content: "● ";
 }
 
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 1px; /* Some padding */ 
+  border-bottom : 1px solid #ccc; /* Gray border */
+  border-radius: 0px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 0px; /* Add a top margin */
+  margin-bottom: 0px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #142647;
+  color: #f0f0f0;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #ccc;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 0px;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
 
 </style>
 
@@ -60,29 +94,34 @@ body, html {
   <div class="w3-bar w3-white w3-card" id="myNavbar">
     <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="logo2.png" alt="logo da Data Machina"></a>
 
-
-    <!-- Right-sided navbar links -->
+<!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">Sobre nós</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i>&nbspEquipe</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i>&nbspClientes</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>&nbspContato</a>
-    </div>
+      <a href="#sobre" class="w3-bar-item w3-button" style="color: #142647;">Sobre nós</a>
+      <a href="#equipe" class="w3-bar-item w3-button" style="color: #142647"><i class="fa fa-user" style="color: #142647;"></i>&nbspEquipe</a>
+      <a href="#clientes" class="w3-bar-item w3-button" style="color: #142647;"><i class="fa fa-th" style="color: #142647;"></i>&nbspClientes</a>
+      <a href="#contato" class="w3-bar-item w3-button" style="color: #142647;"><i class="fa fa-envelope" style="color: #142647;"></i>&nbspContato</a>      <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-button" title="Notifications" style="color: #142647;">Comunicação <i class="fa fa-caret-down" style="color: #142647;"></i></button>     
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="https://drive.google.com/drive/folders/12wJ4vXPs7uLjoqZkaKx4omopUjN3rvcC?usp=sharing" class="w3-bar-item w3-button">Imprensa</a>
+      </div>
+      </div>
+      <a href="trabalheconosco.html" class="w3-bar-item w3-button" style="color: #142647;"><i class="fa fa-coffee" style="color: #142647;"></i>Trabalhe Conosco</a>    </div>
+
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="color: #142647;" onclick="w3_open()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none; background-color: #142647;" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16" style="color: #f0f0f0;">Fechar ×</a>
+  <a href="#sobre" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #f0f0f0;">Sobre nós</a>
+  <a href="#equipe" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #f0f0f0;">Equipe</a>
+  <a href="#clientes" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #f0f0f0;">Clientes</a>
+  <a href="#contato" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #f0f0f0;">Contato</a>
 </nav>
 
 <!-- Header with full-height image -->
@@ -90,7 +129,7 @@ body, html {
   <div class="w3-display-left w3-text-white" style="padding:48px">
     <span class="w3-xxlarge w3-hide-small">Gostamos de problemas difíceis</span><br>
     <h3 class="w3-large">Estamos construindo cidades e negócios mais inteligentes e humanos.</h3>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Mas como?</a></p>
+    <p><a href="#sobre" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Mas como?</a></p>
   </div>
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <a  href="https://www.youtube.com/channel/UC53uChh4XmLF6-CwT6G_UJw/"><i class="fa fa-youtube-play w3-hover-opacity" style="font-size:20px;color:#f0f0f0; padding: 5px ;"></a></i>
@@ -98,8 +137,8 @@ body, html {
 </header>
 
 
-<!-- About Section -->
-<div class="w3-container" style="padding:128px 16px; background: #F0F0F0" id="about">
+<!-- Sobre nós Section -->
+<div class="w3-container" style="padding:128px 16px; background: #F0F0F0" id="sobre">
   <h1 class="w3-center" style="color: #E23025">Sobre Nós</h1>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-third">
@@ -121,103 +160,58 @@ body, html {
 </div>
 
 
-<!-- Team Section -->
-<div class="w3-container" style="padding:128px 16px; background: #142647;" id="team">
+<!-- Equipe Section -->
+ 
+<div class="w3-container w3-center" style="padding:128px 16px; background: #142647;" id="equipe">
   <h1 class="w3-center" style="color: #E23025">Equipe</h1>
 
-      <div class="w3-row-padding w3-grayscale" style="margin-top:32px" align="center"> 
-          
-    <div class="w3-col l3 m6 w3-margin-bottom">
-        <div class="w3-card">
-          <div class="w3-container" style="background-color: #F0F0F0">
-            <img src="marcio.png" style="width:100%" class="w3-hover-opacity" alt="Marcio Cabral"></a>
-            <h2 align="center">Marcio Cabral</h2>
-            <h3 class="w3-opacity" align="center">&nbsp</h3>
-          </div>
-        </div>
-      </div>
+  <div class="w3-row"><br>
 
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <div class="w3-card">
-          <div class="w3-container" style="background-color: #F0F0F0">
-            <img src="ivo.png" style="width:100%" class="w3-hover-opacity" alt="Ivo Pons"></a>
-            <h2 align="center" >Ivo Pons</h2>
-            <h3 class="w3-opacity" align="center">&nbsp</h3>
-          </div>
-        </div>
-      </div>
+    <div class="w3-quarter" style="margin-bottom: 30px;">
+      <img src="marcio.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Marcio Cabral</h3>
+    </div>
     
-     <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-card">
-            <div class="w3-container" style="background-color: #F0F0F0">
-              <img src="roberto.png" style="width:100%" class="w3-hover-opacity" alt="Roberto Marcondes"></a>
-              <h2 align="center">Roberto Marcondes</h2>
-              <h3 class="w3-opacity" align="center">&nbsp</h3>
-            </div>
-          </div>
-        </div>
+    <div class="w3-quarter" style="margin-bottom: 30px;">
+      <img src="ivo.png" alt="Boss" style="width:45%;" class="w3-circle w3-hover-opacity">
+      <h3>Ivo Pons</h3>
+    </div>
     
-        
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <div class="w3-card">
-          <div class="w3-container" style="background-color: #F0F0F0">
-            <img src="luciano.png" style="width:100%" class="w3-hover-opacity" alt="Luciano Cejnog"></a>
-            <h2 align="center">Luciano Cejnog</h2>
-            <h3 class="w3-opacity" align="center">&nbsp</h3>
-          </div>
-        </div>
-      </div>
+    <div class="w3-quarter" style="margin-bottom: 30px;">
+      <img src="roberto.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Roberto Marcondes</h3>
+    </div>
+    
+    <div class="w3-quarter" style="margin-bottom: 30px;">
+      <img src="luciano.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Luciano Cejnog</h3>
+    </div>
 
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <div class="w3-card">
-          <div class="w3-container" style="background-color: #F0F0F0">
-            <img src="flavio.png" style="width:100%" class="w3-hover-opacity" alt="Flávio Silva"></a>
-            <h2 align="center">Flávio Silva</h2>
-            <h3 class="w3-opacity" align="center">&nbsp</h3>
-          </div>
-        </div>
-      </div>
+    <div class="w3-quarter" style="margin-bottom: 0px;">
+      <img src="flavio.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Flávio Silva</h3>
+    </div>
+    
+    <div class="w3-quarter" style="margin-bottom: 0px;">
+      <img src="maura.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Maura Ramos</h3>
+    </div>
 
-      <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-card">
-            <div class="w3-container" style="background-color: #F0F0F0">
-              <img src="maura.png" style="width:100%" class="w3-hover-opacity" alt="Maura Ramos"></a>
-              <h2 align="center">Maura Ramos</h2>
-              <h3 class="w3-opacity" align="center">&nbsp</h3>
-            </div>
-          </div>
-        </div>
+    <div class="w3-quarter" style="margin-bottom: 0px;">
+      <img src="andre.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>André Neto</h3>
+    </div>
 
-
-
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-card">
-              <div class="w3-container" style="background-color: #F0F0F0">
-                  <img src="andre.png" style="width:100%" class="w3-hover-opacity" alt="André Neto"></a>
-                  <h2 align="center">André Neto</h2>
-                  <h3 class="w3-opacity" align="center">&nbsp</h3>
-                </div>
-              </div>
-            </div>
-
-       
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-card">
-              <div class="w3-container" style="background-color: #F0F0F0">
-                  <img src="lucas.png" style="width:100%" class="w3-hover-opacity" alt="Lucas Nunes"></a>
-                  <h2 align="center">Lucas Nunes</h2>
-                  <h3 class="w3-opacity" align="center">&nbsp</h3>
-                </div>
-              </div>
-            </div>
-
-
-
-  </div>
-
-
-<!-- Work Section -->
-<div class="w3-container" style="padding:128px 16px; background: #ffffff" id="work">
+    <div class="w3-quarter" style="margin-bottom: 0px;">
+      <img src="lucas.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Lucas Nunes</h3>
+    </div>
+    </div>
+    </div>
+    
+      
+<!-- Clientes Section -->
+<div class="w3-container" style="padding:128px 16px; background: #ffffff" id="clientes">
   <h1 class="w3-center" style="color: #142647">Clientes</h1>
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-col l3 m6">
@@ -227,27 +221,74 @@ body, html {
 </div>
 
 
-<!-- Contact Section -->
-<div class="w3-container" style="padding:128px 16px; background: #E23025;" id="contact">
-  <h1 class="w3-center" style="color: #142647">Contato</h1>
+<!-- Contato Section -->
 
-  <div class="w3-center">
-    <p  style="color: #ffffff"><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right" style="color: #142647"></i> Av. Vital Brasil, 305, Butantã, São Paulo</p>
-    <p  style="color: #ffffff"><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right" style="color: #142647"></i> Phone: +55 (11) 3032-5195</p>
-    <p  style="color: #ffffff"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right" style="color: #142647" > </i> Email: contato@datamachina.com.br</p>
-  </div>
+<div class="w3-container" style="padding: 128px 16px; background: #E23025" id="contato">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><h1><span class="w3-xlarge" style="color: #142647">Contato</span></h1></div>
+    <p  style="color: #ffffff"><i class="fa fa-map-marker fa-fw w3-xlarge w3-margin-right" style="color: #142647"></i> Av. Vital Brasil, 305, Butantã, São Paulo</p>
+    <p  style="color: #ffffff"><i class="fa fa-phone fa-fw w3-xlarge w3-margin-right" style="color: #142647"></i> +55 (11) 3032-5195</p>
+    <p  style="color: #ffffff"><i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right" style="color: #142647" > </i> contato@datamachina.com.br</p>
+    </div>
+    <div class="w3-col m7">
+        <form class="w3-container w3-card-6 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-padding-small">
+        
+        <div class="w3-row-padding">
+          <div class="w3-half w3-section">
+            <label><p style="color: #142647;"><b>Nome*</b></p></label>
+            <input class="w3-input w3-border" type="text" name="Name" required placeholder="Nome Completo" style="padding: 8px;">
+          </div>
+          <div class="w3-half w3-section">
+            <label><p style="color: #142647;"><b>Email*</b></p></label>
+            <input class="w3-input w3-border" type="email" placeholder="exemplo@gmail.com" name="Email" required>
+          </div>
+        </div>
+
+        <div class="w3-row-padding">
+          <div class="w3-half w3-section">
+            <label><p style="color: #142647;"><b>Empresa</b></p></label>
+            <input class="w3-input w3-border" type="text" placeholder="Empresa em que trabalha" style="padding: 8px">
+          </div>
+          <div class="w3-half w3-section">
+            <label><p style="color: #142647;"><b>Telefone</b></p></label>
+            <input class="w3-input w3-border" type="tel" placeholder="(XX) X XXXX-XXXX">
+          </div>
+        </div>
+      </div>
+       
+      <div class="w3-padding-small">      
+        <label for="subject"><p style="color: #142647;"><b>Mensagem</b></p></label>
+        <textarea id="subject" name="subject" placeholder="Escreva sua mensagem aqui." style="height:80px"></textarea>
+      </div>  
+      <select class="w3-select" name="option">
+        <option value="" disabled selected>Eu quero ser contatado por...</option>
+        <option value="1">Telefone</option>
+        <option value="2">Email</option>
+        <option value="3">WhatsApp</option>
+      </select>
+      <div class="w3-padding-large">  
+      <button type="submit" class="w3-button w3-right w3-theme" style="background-color: #142647; color: #f0f0f0">Enviar</button>
+      </form>
+    </div>
+    </div>
   </div>
 </div>
 
-<!-- Footer -->
-<footer class="w3-center w3-padding-16" style="background-image: linear-gradient(to right, #142647 , #E23025)">
+  </div>
+</div>
+
+
+
+ <!-- Footer -->
+ <footer class="w3-center w3-padding-16" style="background-image: linear-gradient(to right, #142647 , #E23025)">
   <div class="w3-xlarge w3-section">
 
   <a  href="https://www.linkedin.com/company/datamachina/about/"><i class="fa fa-linkedin w3-hover-opacity" style="color: #ffffff; text-decoration: none;"></a></i>
   <a  href="https://www.youtube.com/channel/UC53uChh4XmLF6-CwT6G_UJw/"><i class="fa fa-youtube-play w3-hover-opacity" style="font-size:24px;color:#ffffff; text-decoration: none;"></a></i>
   </div>
-  <p  style="color: #ffffff">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green"  style="color: #ffffff">w3.css</a></p>
-  <p style="color: #ffffff" class="copyright"> &copy; Data Machina - 2020</p>
+    <p style="color: #ffffff" class="copyright"> &copy; Data Machina - 2020</p>
 </footer>
 
 <script>

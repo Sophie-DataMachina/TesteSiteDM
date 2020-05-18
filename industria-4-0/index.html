@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html>
+
+<title>Data Machina</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body, h1, h2, p {font-family: "Space Grotesk", sans-serif;}
+
+h3 {font-size: 20px;
+    color: #F0F0F0;
+}
+
+h2 {font-size: 20px;}
+
+h1 {font-size: 25px;
+    font-weight: bold;
+}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+a:link
+{
+text-decoration:none;
+}
+
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("chatbotdemo.png");
+  min-height: 100%;
+}
+
+.video {
+    width: 560px;
+    margin: 2em auto;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+.itens:before {
+    content: "● ";
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 1px; /* Some padding */ 
+  border-bottom : 1px solid #ccc; /* Gray border */
+  border-radius: 0px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 0px; /* Add a top margin */
+  margin-bottom: 0px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #142647;
+  color: #f0f0f0;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #ccc;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 0px;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+</style>
+
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href=".\..\index.html#home" class="w3-bar-item w3-button w3-wide"><img src="logo2.png" alt="logo da Data Machina"></a>
+
+<!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href=".\..\index.html#sobre" class="w3-bar-item w3-button" style="color: #142647;"><i class="fa fa-heart" style="color: #142647;"></i>&nbspSobre nós</a>
+      <a href=".\..\index.html#equipe" class="w3-bar-item w3-button" style="color: #142647"><i class="fa fa-group" style="color: #142647;"></i>&nbspEquipe</a>
+      <a href=".\..\index.html#soluções" class="w3-bar-item w3-button" style="color: #142647"><i class="fa fa-wrench" style="color: #142647;"></i>&nbspSoluções</a>
+      <a href=".\..\index.html#clientes" class="w3-bar-item w3-button" style="color: #142647;"><i class="fa fa-th" style="color: #142647;"></i>&nbspClientes</a>
+      <a href=".\..\index.html#contato" class="w3-bar-item w3-button" style="color: #142647;"><i class="fa fa-envelope" style="color: #142647;"></i>&nbspContato</a>      <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-button" title="Notifications" style="color: #142647;"><i class="fa fa-globe" style="color: #142647;"></i>&nbspComunicação <i class="fa fa-caret-down" style="color: #142647;"></i></button>     
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="https://drive.google.com/drive/folders/12wJ4vXPs7uLjoqZkaKx4omopUjN3rvcC?usp=sharing" class="w3-bar-item w3-button">Imprensa</a>
+      </div>
+      </div>
+      <a href=".\trabalheconosco\index.html" class="w3-bar-item w3-button" style="color: #142647;"><i class="fa fa-coffee" style="color: #142647;"></i>&nbspTrabalhe Conosco</a>    </div>
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="color: #142647;" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-medium w3-hide-large" style="background-color: #142647;" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16" style="color: #f0f0f0;">Fechar ×</a>
+  <a href=".\..\index.html#sobre" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #f0f0f0;">Sobre nós</a>
+  <a href=".\..\index.html#equipe" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #f0f0f0;">Equipe</a>
+  <a href=".\..\index.html#soluções" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #f0f0f0;">Soluções</a>
+  <a href=".\..\index.html#clientes" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #f0f0f0;">Clientes</a>
+  <a href=".\..\index.html#contato" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #f0f0f0;">Contato</a>
+  <a href=".\..\index.html#trabalheconosco.html" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #ffffff;">Trabalhe Conosco</a>
+</nav>
+  
+
+<!-- Industria 4.0 Section -->
+<div class="w3-container" style="padding-top:128px; padding-bottom: 30px; background: #ffffff" id="dm-health-supply">
+    <h1 class="w3-center" style="color: #E23025">Inspeção Visual e a Indústria 4.0</h1>
+</div>
+<div class="w3-center">
+  <img src="parafuso2.png" style="width: 100%; padding: 0px;" alt="imagens de demonstração funcionamento inspeção visual">      
+</div>
+
+    <div class="w3-row-padding w3-center" style="margin-top:128px">
+      <div class="w3-half">
+  
+       <h3><p style="color: #142647; text-align: center;padding-left: 50px; padding-right: 50px;">Como nossa solução pode ajudar o seu negócio?</h3></p>
+          <ul class="lista-beneficios" style="list-style-type: none; color: #142647; text-align: justify; padding-left: 30px; padding-right: 30px;">
+            <li class="itens">A interface intuitiva e de fácil utilização do software simplifica a configuração e a implementação;</li>
+            <li class="itens">Nosso sistema de Inspeção Visual Computacional, garante o aumento da produtividade e viabiliza a qualidade dos produtos inspecionados;</li>
+            <li class="itens">Projetado para configurar e implementar aplicações de visão computacional, independentemente da câmera ou do frame grabber;</li>
+            <li class="itens">O uso de Inteligência Artificial e de técnicas de Deep Learning aumentam drasticamente a precisão na detecção de anomalias e defeitos em uma variedade de superfícies e fundos complicados em tempo real.</li>
+          </ul> 
+      </div>
+  
+      <div class="w3-half" style="padding-left: 30px; padding-right: 30px;">
+        <iframe width="100%" height="330px" src="https://www.youtube.com/embed/jaghAB8uVP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+  
+    </div>
+  </div>
+
+  <div class="w3-container" style="padding-bottom: 100px; padding-top: 30px; background: #ffffff;">
+    <h1 class="w3-center"><a href="https://forms.gle/vCKw3xpgXY3JnZwC6" class="w3-button w3-padding-large w3-large w3-margin-top w3-hover-opacity" style="color: #E23025; font-size: 25px; font-weight: bold;">Entre em contato e saiba como a nossa solução pode melhorar o seu negócio.</a></h1>
+  </div>
+    <!-- Footer -->
+  <footer class="w3-center w3-padding-16" style="background-image: linear-gradient(to right, #142647 , #E23025)">
+      <div class="w3-xlarge w3-section">
+    
+      <a  href="https://www.linkedin.com/company/datamachina/about/"><i class="fa fa-linkedin w3-hover-opacity" style="color: #ffffff; text-decoration: none;"></a></i>
+      <a  href="https://www.youtube.com/channel/UC53uChh4XmLF6-CwT6G_UJw/"><i class="fa fa-youtube-play w3-hover-opacity" style="font-size:24px;color:#ffffff; text-decoration: none;"></a></i>
+      </div>
+          <p style="color: #ffffff" class="copyright"> &copy; Data Machina - 2020</p>
+    </footer>
+  
+    <script>
+  
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+      
+      
+      // Toggle between showing and hiding the sidebar when clicking the menu icon
+      var mySidebar = document.getElementById("mySidebar");
+      
+      function w3_open() {
+        if (mySidebar.style.display === 'block') {
+          mySidebar.style.display = 'none';
+        } else {
+          mySidebar.style.display = 'block';
+        }
+      }
+      
+      // Close the sidebar with the close button
+      function w3_close() {
+          mySidebar.style.display = "none";
+      }
+      </script>
+      
+      </body>
+      </html>
+      

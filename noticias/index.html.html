@@ -89,6 +89,27 @@ input[type=submit]:hover {
   padding: 10px;
 }
 
+div.gallery {
+   margin: 68px;
+  border: none;
+  float: left;
+  width: 300px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 10px;
+  text-align: center;
+}
+
 </style>
 
 
@@ -131,46 +152,75 @@ input[type=submit]:hover {
   <a href="#contato" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #f0f0f0;">Contato</a>
   <a href="#trabalheconosco.html" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #ffffff;">Trabalhe Conosco</a>
 </nav>
+  
 
+<!-- Health Supply Section -->
+<div class="w3-container" style="padding:128px 16px; background: #ffffff" id="dm-health-supply">
+    <h1 class="w3-center" style="color: #E23025">Notícias</h1>
 
-<!-- Panconomics Section -->
-<div class="w3-container" style="padding:128px 16px; background: #f0f0f0" id="panconomics">
-    <h1 class="w3-center" style="color: #E23025">Panconomics e o COVID-19</h1>
-    <div class="w3-row-padding w3-center" style="margin-top:64px">
-      <div class="w3-half">
-  
-        <h2 class="w3-large" style="color: #142647; text-align: center">Como nossa proposta de solução pode melhorar o cenário de pandemia?</h2>
-        <h3><p style="color: #142647; text-align: justify">A Data Machina pode contribuir em várias frentes nesse processo:</h3></p>
-          <ul class="lista-beneficios" style="list-style-type: none; color: #142647; text-align: justify">
-            <li class="itens">Permitir o acesso à informações confiáveis;</li>
-            <li class="itens">Utilizar os dados já existentes para agregar qualidade às informações;</li>
-            <li class="itens">Georreferenciar os enfermos com COVID-19;</li>
-            <li class="itens">Identificar zonas de risco.</li>
-          </ul>
-  
-          <h3><p style="color: #142647; text-align: justify">A plataforma prevê a aquisição e integração dos seguintes dados:</p></h3>
-          <ul class="lista-beneficios" style="list-style-type: none; color: #142647; text-align: justify">
-            <li class="itens">Dados públicos geolocalizados (dados de mobilidade e socioeconômicos);</li>
-            <li class="itens">Dados de pessoas (pacientes, hospitais): obtidos por uma plataforma de cadastro.</li>
-          </ul>
-  
+    <div class="gallery">
+        <a target="_blank" href="https://revistapegn.globo.com/Startups/noticia/2020/04/prefeitura-de-sp-anuncia-startups-que-terao-r-1-milhao-para-combater-efeitos-do-coronavirus.html">
+          <img src="pegn.png" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">Prefeitura de SP anuncia startups que terão R$ 1 milhão para combater efeitos do coronavírus</div>
       </div>
-  
-      <div class="w3-half">
-        <iframe width="100%" height="330px" src="https://www.youtube.com/embed/FLCd9NSWf6Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
+      <div class="gallery">
+        <a target="_blank" href="https://www.prefeitura.sp.gov.br/cidade/secretarias/desenvolvimento/noticias/?p=296938#.XrC6VNKuo_E.facebook">
+          <img src="psp.png" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">Prefeitura investe R$ 1 milhão em 10 startups que apresentaram projetos inovadores no combate à crise econômica causada pelo coronavírus</div>
       </div>
-  
+      
+      <div class="gallery">
+        <a target="_blank" href="https://pme.estadao.com.br/noticias/geral,startups-de-geolocalizacao-a-organicos-sao-selecionadas-para-combater-crise-do-coronavirus,70003294214">
+          <img src="estadao.png" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Startups de geolocalização a orgânicos são selecionadas para combater crise do corona vírus</div>
+      </div>
+    
     </div>
   </div>
 
-  <!-- Footer -->
+ 
+   <!-- Footer -->
 <footer class="w3-center w3-padding-16" style="background-image: linear-gradient(to right, #142647 , #E23025)">
-    <div class="w3-xlarge w3-section">
+  <div class="w3-xlarge w3-section">
+
+  <a  href="https://www.linkedin.com/company/datamachina/about/"><i class="fa fa-linkedin w3-hover-opacity" style="color: #ffffff; text-decoration: none;"></a></i>
+  <a  href="https://www.youtube.com/channel/UC53uChh4XmLF6-CwT6G_UJw/"><i class="fa fa-youtube-play w3-hover-opacity" style="font-size:24px;color:#ffffff; text-decoration: none;"></a></i>
+  </div>
+      <p style="color: #ffffff" class="copyright"> &copy; Data Machina - 2020</p>
+</footer>
+
+<script>
+
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
   
-    <a  href="https://www.linkedin.com/company/datamachina/about/"><i class="fa fa-linkedin w3-hover-opacity" style="color: #ffffff; text-decoration: none;"></a></i>
-    <a  href="https://www.youtube.com/channel/UC53uChh4XmLF6-CwT6G_UJw/"><i class="fa fa-youtube-play w3-hover-opacity" style="font-size:24px;color:#ffffff; text-decoration: none;"></a></i>
-    </div>
-        <p style="color: #ffffff" class="copyright"> &copy; Data Machina - 2020</p>
-  </footer>
   
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+  
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  
+  // Close the sidebar with the close button
+  function w3_close() {
+      mySidebar.style.display = "none";
+  }
+  </script>
+  
+  </body>
+  </html>
   

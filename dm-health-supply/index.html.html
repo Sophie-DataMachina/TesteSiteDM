@@ -2,7 +2,7 @@
 
 <html>
 
-<title>Data Machina</title>
+<title>Health Supply - Data Machina</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="reset.css">
@@ -106,13 +106,14 @@ input[type=submit]:hover {
       <a href="index.html#soluções" class="w3-bar-item w3-button" style="color: #142647"><i class="fa fa-wrench" style="color: #142647;"></i>&nbspSoluções</a>
       <a href="index.html#clientes" class="w3-bar-item w3-button" style="color: #142647;"><i class="fa fa-th" style="color: #142647;"></i>&nbspClientes</a>
       <a href="index.html#contato" class="w3-bar-item w3-button" style="color: #142647;"><i class="fa fa-envelope" style="color: #142647;"></i>&nbspContato</a>      <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-button" title="Notifications" style="color: #142647;"><i class="fa fa-globe" style="color: #142647;"></i>&nbspComunicação <i class="fa fa-caret-down" style="color: #142647;"></i></button>     
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-      <a href="https://drive.google.com/drive/folders/12wJ4vXPs7uLjoqZkaKx4omopUjN3rvcC?usp=sharing" class="w3-bar-item w3-button">Imprensa</a>
+        <button class="w3-button" title="Notifications" style="color: #142647;"><i class="fa fa-globe" style="color: #142647;"></i>&nbspComunicação <i class="fa fa-caret-down" style="color: #142647;"></i></button>     
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        <a href="https://drive.google.com/drive/folders/12wJ4vXPs7uLjoqZkaKx4omopUjN3rvcC?usp=sharing" class="w3-bar-item w3-button">Imprensa</a>
+        <a href="noticias.html" class="w3-bar-item w3-button">Notícias</a>
       </div>
-      </div>
-      <a href="trabalheconosco.html" class="w3-bar-item w3-button" style="color: #142647;"><i class="fa fa-coffee" style="color: #142647;"></i>&nbspTrabalhe Conosco</a>    </div>
-
+        </div>
+        <a href="trabalheconosco.html" class="w3-bar-item w3-button" style="color: #142647;"><i class="fa fa-coffee" style="color: #142647;"></i>&nbspTrabalhe Conosco</a>    </div>
+  
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="color: #142647;" onclick="w3_open()">
@@ -131,11 +132,11 @@ input[type=submit]:hover {
   <a href="#contato" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #f0f0f0;">Contato</a>
   <a href="#trabalheconosco.html" onclick="w3_close()" class="w3-bar-item w3-button" style="color: #ffffff;">Trabalhe Conosco</a>
 </nav>
+  
 
-
-<!-- Panconomics Section -->
-<div class="w3-container" style="padding:128px 16px; background: #f0f0f0" id="panconomics">
-    <h1 class="w3-center" style="color: #E23025">Panconomics e o COVID-19</h1>
+<!-- Health Supply Section -->
+<div class="w3-container" style="padding:128px 16px; background: #ffffff" id="dm-health-supply">
+    <h1 class="w3-center" style="color: #E23025">Health Supply e o COVID-19</h1>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
       <div class="w3-half">
   
@@ -172,5 +173,35 @@ input[type=submit]:hover {
     </div>
         <p style="color: #ffffff" class="copyright"> &copy; Data Machina - 2020</p>
   </footer>
-  
-  
+
+  <script>
+
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+    
+    
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+    
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+      } else {
+        mySidebar.style.display = 'block';
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
+    }
+    </script>
+    
+    </body>
+    </html>
+    
